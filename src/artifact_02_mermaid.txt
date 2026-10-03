@@ -1,0 +1,26 @@
+flowchart TD
+    subgraph Creators & Community
+        C[Technical Creator / Evangelist] -->|1. Publishes Madrid '26 Content| TW[X / Dev.to / GitHub / YouTube]
+        C -->|2. Submits Content URL & Metadata| CLI[EncuentroBoost CLI / Portal]
+    end
+
+    subgraph Off-Chain Enterprise Orchestration Layer
+        CLI -->|3. POST Payload| API[EncuentroBoost Agent Daemon]
+        API -->|4. Validates Metadata & SHA256 Hash| VAL[Content Sanitizer & Verifier]
+        VAL -->|5. Triggers Webhook| DIS[Discord / Slack Announcement Channel]
+        VAL -->|6. Sends Email via Resend| RES[Resend API: Confirmation & Madrid Pass]
+        VAL -->|7. Signs Authorized Attestation| ORC[Attestation Signer Keypair]
+    end
+
+    subgraph Solana Runtime On-Chain Layer
+        ORC -->|8. Signed Claim Transaction| PROG[Anchor Program: encuentro_boost]
+        subgraph Program Derived Accounts
+            CAMP[Campaign PDA: encuentro_2026_madrid]
+            CREAT[Content Submission PDA: creator_content_hash]
+            VAULT[Treasury Escrow PDA: vault_token_account]
+        end
+        PROG --> CAMP
+        PROG --> CREAT
+        PROG -->|9. Releases Micro-Grant / Reward| VAULT
+        VAULT -->|10. Transfers Native SOL / SPL Tokens| CWALLET[Creator Solana Wallet]
+    end

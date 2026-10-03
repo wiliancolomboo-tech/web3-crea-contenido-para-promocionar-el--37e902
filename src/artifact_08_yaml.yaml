@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  encuentro-boost-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: encuentro_madrid_orchestrator
+    restart: always
+    environment:
+      - PORT=8080
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - ORACLE_PRIVATE_KEY=${ORACLE_PRIVATE_KEY}
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
