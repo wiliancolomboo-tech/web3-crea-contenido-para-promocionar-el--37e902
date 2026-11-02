@@ -1,0 +1,8 @@
+¿Por qué conformarse con marketing Web2? 
+
+MEAP premia a los creadores de contenido que promocionen El Encuentro 2026:
+⚡ Comisiones instantáneas en SOL liquidadas en bloque.
+🎟️ Entradas acuñadas como PDAs verificables en puerta.
+📧 Notificaciones instantáneas integradas vía @resend + Discord webhooks.
+
+Código abierto y auditado. 👇

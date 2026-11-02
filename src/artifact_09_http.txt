@@ -1,0 +1,13 @@
+GET /healthz HTTP/1.1
+Host: localhost:8080
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "status": "healthy",
+  "service": "el-encuentro-madrid-amplification-oracle",
+  "cluster": "devnet",
+  "program_id": "Encu26Mad11111111111111111111111111111111111",
+  "uptime_seconds": 86400
+}

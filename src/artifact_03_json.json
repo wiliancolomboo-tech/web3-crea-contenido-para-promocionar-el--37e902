@@ -1,0 +1,30 @@
+{
+  "name": "encuentro-madrid-agent",
+  "version": "1.0.0",
+  "description": "Production Event Relayer & Viral Automation Agent for El Encuentro Madrid 2026",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "cli": "ts-node src/cli.ts",
+    "test": "mocha -r ts-node/register 'tests/**/*.ts' --timeout 60000 --exit"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@solana/web3.js": "^1.95.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "resend": "^3.5.0",
+    "bs58": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "@types/mocha": "^10.0.7",
+    "@types/chai": "^4.3.16",
+    "chai": "^4.4.1",
+    "mocha": "^10.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

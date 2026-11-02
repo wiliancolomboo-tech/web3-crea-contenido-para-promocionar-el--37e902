@@ -1,0 +1,20 @@
+🧵 1/3
+🇪🇸 ¡Madrid se convertirá en el epicentro mundial de Solana! Presentamos la infraestructura técnica oficial para impulsar "El Encuentro 2026 en Madrid":
+
+Un protocolo On-Chain de Prueba de Amplificación (PoA) con liquidación instantánea y ticketing automatizado.
+
+#Solana #ElEncuentro2026 #MadridTech
+
+🧵 2/3
+🛠️ ¿Cómo funciona?
+1️⃣ Creadores registran contenido técnico y promocional en Solana.
+2️⃣ Oráculo valida la calidad y métricas anti-sybil en tiempo real.
+3️⃣ Recompensas en USDC liberadas vía Anchor Escrow + VIP Passes emitidos automáticamente con @resend.
+
+Cero fricción. 100% On-Chain.
+
+🧵 3/3
+El ecosistema hispanohablante de @solana no solo crea comunidad: construye software enterprise de primer nivel para escalar globalmente.
+
+Revisa el repositorio, corre el nodo en Docker y asegura tu pase para Madrid 2026 🇪🇸🚀
+https://github.com/solana-superteam/el-encuentro-2026-madrid-engine

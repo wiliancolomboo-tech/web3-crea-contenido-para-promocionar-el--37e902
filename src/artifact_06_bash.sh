@@ -1,18 +1,19 @@
-# 1. Clone repository and install dependencies
-git clone https://github.com/solana-esp/encuentro-2026-madrid-boost.git
-cd encuentro-2026-madrid-boost
-npm install
-
-# 2. Build Anchor smart program
+# 1. Build optimized BPF bytecode
 anchor build
 
-# 3. Synchronize program keys and deploy to Solana Devnet
-solana config set --url https://api.devnet.solana.com
-anchor deploy --provider.cluster devnet
+# 2. Synchronize Program ID
+solana address -k target/deploy/el_encuentro_engine-keypair.json
+anchor keys sync
 
-# 4. Initialize Campaign & Escrow Vault via CLI
-npm run cli -- init-campaign \
-  --name "madrid_encuentro_2026" \
-  --reward 0.5 \
-  --max 100 \
-  --deposit 5.0
+# 3. Deploy to Solana Devnet
+solana program deploy \
+  --program-id target/deploy/el_encuentro_engine-keypair.json \
+  target/deploy/el_encuentro_engine.so \
+  --url https://api.devnet.solana.com
+
+# 4. Initialize Campaign parameters
+npx ts-node cli/admin-init.ts \
+  --bronze 100 \
+  --silver 500 \
+  --gold 1500 \
+  --end-date "2026-10-15T00:00:00Z"

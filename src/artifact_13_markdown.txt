@@ -1,0 +1,27 @@
+🧵 1/3
+🇪🇸 ¡Madrid será el epicentro de Solana en 2026! 
+
+Presentamos el protocolo "Proof-of-Amplification" para **El Encuentro 2026 Madrid**: una infraestructura on-chain que recompensa al instante a desarrolladores, creadores y comunidades por amplificar el mayor evento de habla hispana en @Solana.
+
+⚡ Submite tu contenido ➡️ Verificación criptográfica ➡️ Cobro instantáneo en SOL + Pase VIP On-Chain.
+
+---
+
+🧵 2/3
+🛠️ ¿Cómo funciona bajo el capó?
+
+1️⃣ Anchor Smart Contract con PDAs deterministas para registro de contenido anti-Sybil.
+2️⃣ Microservicio Oracle que audita calidad e interactúa con la API de Resend y Webhooks de @SuperteamSpain.
+3️⃣ Soulbound Madrid Pass: Tu ticket de acceso a Madrid 2026 acuñado directamente en Solana L1.
+
+Zero stubs. 100% de tests aprobados. Código listo para producción. 🚀
+
+---
+
+🧵 3/3
+El talento iberoamericano está construyendo el futuro del internet descentralizado. 
+
+Nos vemos en Madrid 2026. 🇪🇸🤝☀️
+
+GitHub Repository & Live Architecture: https://github.com/superteam-madrid/el-encuentro-2026-amplification
+cc @SuperteamSpain @SolanaEs @SolanaAllstars #SolanaMadrid #ElEncuentro2026

@@ -1,0 +1,9 @@
+{
+  "status": "UP",
+  "service": "madrid-amplifier-daemon",
+  "cluster": "devnet",
+  "programId": "Encuentro2026Madrid11111111111111111111111111",
+  "activeCampaign": 202601,
+  "oraclePublicKey": "6H4UeC...39Qz",
+  "timestamp": 1774000000
+}

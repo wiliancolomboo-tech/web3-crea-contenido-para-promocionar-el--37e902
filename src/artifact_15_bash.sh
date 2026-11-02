@@ -1,0 +1,1 @@
+spl-token transfer <REWARD_MINT_ADDRESS> 10000 <VAULT_PDA_ADDRESS> --fund-recipient

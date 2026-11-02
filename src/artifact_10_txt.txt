@@ -1,0 +1,11 @@
+GET /health
+Status: 200 OK
+Response:
+{
+  "status": "healthy",
+  "service": "SolEncuentro-PromoEngine",
+  "network": "solana-devnet",
+  "activeCampaign": "madrid_2026_launch",
+  "vaultBalanceLamports": 25000000000,
+  "timestamp": 1740249600
+}

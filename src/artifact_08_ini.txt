@@ -1,0 +1,9 @@
+NODE_ENV=production
+PORT=8080
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+PROGRAM_ID=EnCu26Mad7XbWkVx8Zc9Zg8hR8vPswwH5K7gNuE4oR1Q
+EVENT_TAG=MADRID_2026_ENCUENTRO
+ADMIN_PRIVATE_KEY=[12,45,231,...]
+ORACLE_PRIVATE_KEY=[99,104,22,...]
+RESEND_API_KEY=re_live_enterprise_secret
+DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder

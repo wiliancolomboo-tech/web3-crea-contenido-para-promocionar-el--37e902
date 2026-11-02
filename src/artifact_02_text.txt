@@ -1,0 +1,24 @@
+encuentro-madrid-2026/
+├── Anchor.toml
+├── Cargo.toml
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example
+├── programs/
+│   └── encuentro_protocol/
+│       ├── Cargo.toml
+│       └── src/
+│           ├── lib.rs
+│           ├── state.rs
+│           ├── errors.rs
+│           └── events.rs
+├── client/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── src/
+│   │   ├── cli.ts
+│   │   ├── service.ts
+│   │   ├── mailer.ts
+│   │   └── webhook.ts
+│   └── tests/
+│       └── encuentro.spec.ts

@@ -1,0 +1,7 @@
+¿Cómo funciona MadridPulse para El Encuentro Madrid?
+
+1️⃣ Escribes hilos técnicos, tutoriales o cobertura del evento.
+2️⃣ Nuestro Oracle valida la calidad y genera un SHA-256 en @Solana.
+3️⃣ Reclamo inmediato de recompensas en SOL directo a tu wallet + VIP Hack Pass vía @resend.
+
+Cero intermediarios. Cero bots granjeando. 100% Rust & Anchor.

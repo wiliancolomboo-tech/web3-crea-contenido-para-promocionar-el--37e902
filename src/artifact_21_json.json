@@ -1,0 +1,12 @@
+{
+  "status": "HEALTHY",
+  "service": "El Encuentro 2026 Madrid Promotion Engine",
+  "network": "solana-devnet",
+  "programId": "Encuentr0Madrid202611111111111111111111111111",
+  "uptime": 86420,
+  "subsystem": {
+    "solanaRpc": "connected",
+    "resendApi": "ready",
+    "discordWebhook": "configured"
+  }
+}

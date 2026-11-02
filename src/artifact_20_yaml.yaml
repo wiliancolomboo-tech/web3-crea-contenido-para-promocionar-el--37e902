@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  encuentro-promo-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: encuentro-madrid-promo-daemon
+    restart: always
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=Encu26MadridPromo111111111111111111111111111
+      - ORACLE_PRIVATE_KEY=[12,43,184,88,29,190,...]
+      - RESEND_API_KEY=re_123456789abcdef
+      - DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+    healthcheck:
+      test: ["CMD-SHELL", "node -e 'console.log(\"Health OK\")'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"

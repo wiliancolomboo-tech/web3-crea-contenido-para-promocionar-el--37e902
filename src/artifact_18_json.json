@@ -1,0 +1,9 @@
+{
+  "status": "HEALTHY",
+  "protocol": "El Encuentro 2026 Madrid Promotion Engine",
+  "cluster": "solana-devnet",
+  "activeCampaign": "MADRID2026",
+  "resendConnected": true,
+  "slotHeight": 284920194,
+  "timestamp": "2026-03-30T10:00:00.000Z"
+}

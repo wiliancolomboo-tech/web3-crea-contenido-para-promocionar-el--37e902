@@ -1,0 +1,1 @@
+anchor run emergency-pause -- --paused true

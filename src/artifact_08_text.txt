@@ -1,0 +1,11 @@
+1/4 🇪🇸 ¡La cuenta atrás para El Encuentro 2026 en Madrid ha comenzado! La cumbre que reunirá a los mayores constructores, founders y hackers del ecosistema @Solana en España e Hispanoamérica ya tiene motor on-chain: presentamos el Protocolo Encuentro 2026. ⚡🧵👇
+
+2/4 🛠️ ¿Por qué conformarse con Web2 cuando construyes en Solana? Hemos desarrollado un sistema Anchor full-stack con Proof-of-Amplification on-chain: 
+✅ Verificación criptográfica de promotores
+✅ Emisión instantánea de tickets vía @resend
+✅ Telemetría en tiempo real
+
+3/4 🌐 El código está 100% abierto, testeado y listo para producción bajo Docker, integrando WebSockets para confirmación instantánea de tickets en menos de 400ms. ¡Hagamos que Madrid sea el epicentro global de Solana en 2026! 🚀🇪🇸
+
+4/4 🔗 Repositorio completo & Arquitectura técnica: https://github.com/solana-esp/encuentro-madrid-2026
+@SolanaConf @SuperteamES @solana ¡Nos vemos en Madrid 2026! 🏛️☀️

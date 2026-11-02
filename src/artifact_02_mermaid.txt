@@ -1,26 +1,30 @@
 flowchart TD
-    subgraph Creators & Community
-        C[Technical Creator / Evangelist] -->|1. Publishes Madrid '26 Content| TW[X / Dev.to / GitHub / YouTube]
-        C -->|2. Submits Content URL & Metadata| CLI[EncuentroBoost CLI / Portal]
+    subgraph OnChain ["Solana Runtime (Anchor Engine)"]
+        Init["init_campaign()<br/>Organizer defines Madrid 2026 tiers, split %"]
+        RegRef["register_advocate()<br/>Derives Advocate PDA & Referral Hash"]
+        TicketBuy["mint_promoted_ticket()<br/>Buyer purchases ticket with Ref Code"]
+        Split["Automated CPI Split<br/>Treasury 85% | Advocate 15%"]
+        State["State Update<br/>Campaign & Advocate PDAs updated"]
     end
 
-    subgraph Off-Chain Enterprise Orchestration Layer
-        CLI -->|3. POST Payload| API[EncuentroBoost Agent Daemon]
-        API -->|4. Validates Metadata & SHA256 Hash| VAL[Content Sanitizer & Verifier]
-        VAL -->|5. Triggers Webhook| DIS[Discord / Slack Announcement Channel]
-        VAL -->|6. Sends Email via Resend| RES[Resend API: Confirmation & Madrid Pass]
-        VAL -->|7. Signs Authorized Attestation| ORC[Attestation Signer Keypair]
+    subgraph OffChain ["Madrid26 EMAVE Orchestrator"]
+        Worker["WebSocket Geyser / RPC Listener"]
+        Renderer["Dynamic Content Renderer<br/>Generates localized Spanish/English tickets"]
+        ResendAPI["Resend Enterprise API<br/>Dispatches HTML5 Ticket & Calendar ICS"]
+        Webhook["Discord/Slack Community Webhook<br/>Broadcasts Referral Leaderboard"]
     end
 
-    subgraph Solana Runtime On-Chain Layer
-        ORC -->|8. Signed Claim Transaction| PROG[Anchor Program: encuentro_boost]
-        subgraph Program Derived Accounts
-            CAMP[Campaign PDA: encuentro_2026_madrid]
-            CREAT[Content Submission PDA: creator_content_hash]
-            VAULT[Treasury Escrow PDA: vault_token_account]
-        end
-        PROG --> CAMP
-        PROG --> CREAT
-        PROG -->|9. Releases Micro-Grant / Reward| VAULT
-        VAULT -->|10. Transfers Native SOL / SPL Tokens| CWALLET[Creator Solana Wallet]
+    subgraph UserSphere ["End Users"]
+        Organizer["Event Organizer"] -->|1. Initialize| Init
+        Advocate["Community Creator"] -->|2. Get Referral Link| RegRef
+        Attendee["Attendee"] -->|3. Buys Madrid 2026 Pass| TicketBuy
     end
+
+    TicketBuy --> Split
+    Split --> State
+    State -.->|Solana Event: TicketPurchased| Worker
+    Worker --> Renderer
+    Renderer --> ResendAPI
+    Renderer --> Webhook
+    ResendAPI -->|4. Confirmation Email + QR Code| Attendee
+    Webhook -->|5. Madrid 2026 Alert| Advocate

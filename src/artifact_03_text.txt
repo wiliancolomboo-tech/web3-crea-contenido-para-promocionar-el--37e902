@@ -1,0 +1,4 @@
+programs/encuentro-promo/
+├── Cargo.toml
+└── src/
+    └── lib.rs

@@ -1,0 +1,12 @@
+GET /health
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "status": "healthy",
+  "service": "madrid-encuentro-2026-agent",
+  "solana_cluster": "devnet",
+  "program_id": "Encu2026MadridPromoEngine1111111111111111111",
+  "uptime_seconds": 84210,
+  "pending_submissions": 0
+}

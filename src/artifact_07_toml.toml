@@ -1,0 +1,21 @@
+[toolchain]
+
+[features]
+seeds = true
+skip-lint = false
+
+[programs.localnet]
+el_encuentro_pulse = "Encu26MadR1dPuLse11111111111111111111111111"
+
+[programs.devnet]
+el_encuentro_pulse = "Encu26MadR1dPuLse11111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-node tests/el_encuentro_pulse.ts"

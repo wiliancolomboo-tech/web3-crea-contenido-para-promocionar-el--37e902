@@ -1,0 +1,7 @@
+¿Cómo funciona la tecnología?
+
+1️⃣ Registra tu hilo, video o artículo con hash SHA-256 en nuestro contrato Anchor en @solana.
+2️⃣ El oráculo valida métricas de impacto orgánico en tiempo real.
+3️⃣ La tesorería en custodia liquida automáticamente $SOL a tu wallet y emite tu VIP Pass vía @resend.
+
+0 intermediarios. 100% transparente.

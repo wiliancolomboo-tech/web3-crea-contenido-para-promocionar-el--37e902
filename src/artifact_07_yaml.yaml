@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  madrid-oracle-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: encuentro_madrid_oracle
+    restart: unless-stopped
+    environment:
+      - RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=Encu26Madrid111111111111111111111111111111111
+      - ORACLE_PRIVATE_KEY=${ORACLE_PRIVATE_KEY}
+      - ORGANIZER_PRIVATE_KEY=${ORGANIZER_PRIVATE_KEY}
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

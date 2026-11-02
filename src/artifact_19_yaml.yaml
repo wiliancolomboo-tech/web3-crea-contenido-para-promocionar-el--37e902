@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  oracle-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: encuentro-madrid-oracle
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=EnC2o26MadridAmpLiFieD111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+      - ORACLE_KEYPAIR_PATH=/secrets/oracle-keypair.json
+    volumes:
+      - ./secrets/oracle-keypair.json:/secrets/oracle-keypair.json:ro
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

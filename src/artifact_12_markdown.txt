@@ -1,0 +1,8 @@
+¿Creas contenido técnico o hilos sobre Solana? Ya no dependes de promesas manuales.
+
+Hemos desplegado un programa en Solana (Anchor + Ed25519 oracles):
+1️⃣ Registra tu tweet/vídeo con hash SHA-256
+2️⃣ Nuestro relay verifica el impacto real
+3️⃣ Recompensa instantánea en SOL + Pase VIP vía @resend
+
+Solana es velocidad y transparencia.

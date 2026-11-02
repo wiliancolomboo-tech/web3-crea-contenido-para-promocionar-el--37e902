@@ -1,0 +1,9 @@
+No más marketing centralizado ni métricas de vanidad:
+
+Construimos el "Proof-of-Amplification Protocol" sobre Solana:
+✅ Validación criptográfica Ed25519 de engagement
+✅ Recompensas automáticas en SPL/USDC en escrow
+✅ Descuentos y VIP Passes en NFTs dinámicos
+✅ Alertas Resend & Discord
+
+Código abierto y listo para producción. 🚀

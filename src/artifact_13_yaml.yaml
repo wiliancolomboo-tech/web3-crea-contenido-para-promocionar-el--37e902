@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  madridpulse-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: madridpulse-daemon
+    restart: always
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=MAdr1dPuLse11111111111111111111111111111111
+      - DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+      - RESEND_API_KEY=re_SampleKeyMadridPulse2026
+      - NOTIFY_EMAIL=organizers@elencuentro2026.es
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

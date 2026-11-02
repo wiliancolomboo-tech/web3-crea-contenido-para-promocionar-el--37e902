@@ -1,0 +1,7 @@
+Construido 100% sobre @solana:
+• Contrato inteligente Anchor con registro de hash criptográfico anti-sybil.
+• Oráculo descentralizado que valida impresiones reales y emite pases VIP Soulbound.
+• Escrow seguro con liquidación instantánea en lamports/USDC.
+• Notificaciones automáticas enterprise vía @resend y Webhooks.
+
+Cero intermediarios. Rendimiento a escala web. 🚀

@@ -1,0 +1,7 @@
+SOLANA_RPC_URL=https://api.devnet.solana.com
+PROGRAM_ID=Encu26Madrid111111111111111111111111111111111
+AUTHORITY_SECRET_KEY=[12,43,156,...]
+DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+RESEND_API_KEY=re_123456789abcdef
+NOTIFICATION_EMAIL=press@encuentro2026.madrid
+PORT=8080

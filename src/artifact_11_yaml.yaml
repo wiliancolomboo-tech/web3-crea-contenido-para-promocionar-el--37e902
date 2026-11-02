@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  madrid26-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: madrid26_viral_engine
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - EMAIL_FROM=entradas@solana-madrid.es
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+    healthcheck:
+      test: ["CMD-SHELL", "node -e 'console.log(\"OK\")' || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

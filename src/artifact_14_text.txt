@@ -1,0 +1,28 @@
+🧵 1/3
+🇪🇸 ¡Madrid se convierte en el epicentro de la innovación Web3 mundial!
+
+En 2026 recibimos "El Encuentro 2026 en Madrid", la cumbre hispanohablante de referencia en el ecosistema @solana. 
+
+Para celebrarlo, no lanzamos un concurso de marketing más: presentamos el protocolo "Proof-of-Amplification", un sistema on-chain que recompensa a quienes construyan y compartan contenido educativo y técnico. 🚀
+
+---
+
+🧵 2/3
+¿Cómo participar y conseguir tu VIP Pass a #ElEncuentro2026?
+
+1️⃣ Crea contenido de alto valor (Hilos técnicos, tutoriales en Rust/Anchor, podcasts o análisis).
+2️⃣ Registra tu enlace a través de nuestro cliente o CLI descentralizada.
+3️⃣ Nuestro oráculo valida el impacto e inscribe tu credencial Soulbound directamente en Solana en segundos. ⚡️
+
+Código 100% abierto y auditable.
+
+---
+
+🧵 3/3
+No te quedes fuera del mayor evento cripto en la capital de España. 
+
+Madrid 2026 será un punto de inflexión para la adopción masiva de Web3 en el mundo hispano. 
+
+Empieza a crear hoy, reclama tus puntos de reputación y asegura tu lugar en la historia con @solana. 🇪🇸✨
+
+👉 Conoce más y despliega tu nodo validador: https://elencuentromadrid.es/2026

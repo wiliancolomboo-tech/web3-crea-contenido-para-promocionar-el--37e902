@@ -1,0 +1,7 @@
+SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLANA_WS_URL=wss://api.devnet.solana.com
+PROGRAM_ID=EnCu26Madr1d1111111111111111111111111111111
+RESEND_API_KEY=re_encuentro_2026_prod_token
+DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
+CREATOR_FALLBACK_EMAIL=creators@solana-madrid.org
+PORT=8080

@@ -1,0 +1,20 @@
++---------------------------------------------------------------------------------+
+|                        MADRID26 PROTOCOL TOPOLOGY                               |
++---------------------------------------------------------------------------------+
+|  [Client Web3 App] ---> [Solana RPC / QuickNode / Helius Geyser WebSocket]       |
+|                                |                                                |
+|                                v                                                |
+|       [Solana On-Chain Anchor Program (madrid26_amplification)]                 |
+|                 + Content Registry PDA (seeds = [b"content", creator, id])      |
+|                 + Protocol Vault PDA   (seeds = [b"vault", campaign])           |
+|                                |                                                |
+|                                v  (Commitment: Confirmed / Finalized Events)    |
+|       [TypeScript Integration Worker Daemon (Node.js/Bun Runtime)]              |
+|                 |                                                               |
+|        +--------+------------------------+                                      |
+|        |                                 |                                      |
+|        v                                 v                                      |
+|  [Resend Enterprise API]        [Discord / Slack Webhooks]                      |
+|  - HTML5 Ticketing Payload      - Real-Time Bounty Notifications                |
+|  - Pass Signature QR Code       - Public Ambassador Recognition                 |
++---------------------------------------------------------------------------------+

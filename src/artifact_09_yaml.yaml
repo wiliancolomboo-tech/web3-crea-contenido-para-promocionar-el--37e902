@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  madridpulse-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: madridpulse_agent
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - PROGRAM_ID=Madr1d2o26PuLseEngine111111111111111111111
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+      - ORACLE_PRIVATE_KEY_JSON=${ORACLE_PRIVATE_KEY_JSON}
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"

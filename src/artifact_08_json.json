@@ -1,0 +1,10 @@
+{
+  "status": "healthy",
+  "service": "madrid-encuentro-oracle-relay",
+  "cluster": "solana-devnet",
+  "program_id": "Encu26Madrid111111111111111111111111111111111",
+  "vault_balance_sol": 14.85,
+  "claims_processed": 34,
+  "resend_status": "connected",
+  "uptime_seconds": 184920
+}

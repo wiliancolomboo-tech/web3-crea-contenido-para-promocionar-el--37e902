@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  madrid-verifier-daemon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: madrid_encuentro_verifier
+    restart: unless-stopped
+    environment:
+      - SOLANA_RPC_URL=https://api.devnet.solana.com
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+      - PORT=8080
+    volumes:
+      - ./keys/verifier-keypair.json:/etc/secrets/verifier.json:ro
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

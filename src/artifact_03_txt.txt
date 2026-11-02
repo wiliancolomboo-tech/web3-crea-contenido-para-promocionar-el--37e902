@@ -1,0 +1,23 @@
++------------------------------------------------------------------------------------+
+|                         SOLANA ON-CHAIN SETTLEMENT                                 |
+|  [Program ID: Encuentro1111111111111111111111111111111111]                         |
+|     +-- GlobalEventConfig PDA: ['event_config', madrid_2026_pubkey]                |
+|     +-- CreatorProfile PDA:    ['creator_campaign', authority, event_config]       |
+|     +-- ReferralRecord PDA:    ['referral_log', creator_profile, attendee_pubkey]  |
++------------------------------------------------------------------------------------+
+                                      ^
+                                      | WebSocket Subscription (LogsSubscribe)
+                                      v
++------------------------------------------------------------------------------------+
+|                       AUTOMATION CLI & EVENT RELAY SERVICE                         |
+|  - Node.js runtime / TypeScript 5.x / @coral-xyz/anchor                            |
+|  - Idempotent signature cache                                                      |
++------------------------------------------------------------------------------------+
+          |                                                   |
+          | HTTPS REST API (TLS 1.3)                          | Webhook Payload (JSON)
+          v                                                   v
++------------------------------------+             +----------------------------------+
+|      RESEND TRANSACTIONAL EMAIL    |             |      DISCORD / SLACK WEBHOOK     |
+|  - Deliver QR VIP Badges           |             |  - Madrid 2026 Organizer Channel |
+|  - Devnet/Mainnet Claim Metadata   |             |  - Live Leaderboard Broadcasts   |
++------------------------------------+             +----------------------------------+

@@ -1,0 +1,36 @@
+flowchart TD
+    subgraph ClientLayer ["Client & Creator Interaction"]
+        A["CLI Campaign Tool (Madrid 2026 CLI)"]
+        B["Community Creator Terminal"]
+    end
+
+    subgraph SolanaCluster ["Solana Blockchain (Devnet / Mainnet-Beta)"]
+        C["Program ID: EncuentroMadrid20261111111111111111111111111"]
+        D[("Campaign Escrow PDA")]
+        E[("Creator Registry PDA")]
+        F[("Submission Record PDA")]
+    end
+
+    subgraph OffChainEngine ["MCE Enterprise Daemon (Node.js/TypeScript)"]
+        G["WebSocket / Event Listener Engine"]
+        H["Idempotent Processing & Retry Queue"]
+        I["Verification & Cryptographic Hash Normalizer"]
+    end
+
+    subgraph EnterpriseAPIs ["Enterprise Webhook & Communication Cloud"]
+        J["Discord Webhook Engine (#encuentro-2026)"]
+        K["Resend Email API (Official Madrid Pass Delivery)"]
+        L["Prometheus / Health Telemetry Endpoint"]
+    end
+
+    A -->|RPC Transactions| C
+    B -->|Submit Content| C
+    C --> D
+    C --> E
+    C --> F
+    C -.->|WebSocket LogsSubscribe| G
+    G --> H
+    H --> I
+    I --> J
+    I --> K
+    H --> L

@@ -1,0 +1,10 @@
+# ⚡ El Encuentro Madrid 2026: Bridging Europe & Latin America on Solana
+
+Madrid is taking center stage. In 2026, **El Encuentro** convenes 2,500+ elite engineers, venture partners, and ecosystem champions in Spain's vibrant capital.
+
+Key Tracks:
+- Solana Virtual Machine (SVM) Optimization & Parallel Execution
+- Real-World Asset (RWA) Tokenization under European MiCA Frameworks
+- Cross-Border Payments & Global Remittances with sub-second finality
+
+Be part of history where historic heritage meets cryptographic speed.

@@ -1,0 +1,42 @@
+flowchart TD
+    subgraph Creators ["Ambassadors & Content Creators"]
+        U1["Content Creator / DevRel"]
+        U2["Madrid Meetup Host"]
+    end
+
+    subgraph Social_Web ["Distribution Channels"]
+        X["X / Twitter Thread #EncuentroMadrid2026"]
+        GH["Technical Article / GitHub Repo"]
+    end
+
+    subgraph MadEncuentro_Engine ["MadEncuentro Oracle & Automation Daemon"]
+        CLI["mad-encuentro CLI"]
+        WORKER["Node.js Content Verification Worker"]
+        ED25519["Ed25519 Oracle Keypair"]
+    end
+
+    subgraph Solana_Cluster ["Solana Blockchain (Madrid Encuentro Program)"]
+        PROG["mad_encuentro Anchor Program"]
+        CAMPAIGN["Campaign State PDA"]
+        ESCROW["Vault Token / SOL Account"]
+        CREATOR_ACC["Creator Claim State PDA"]
+    end
+
+    subgraph Enterprise_Integrations ["Enterprise Notification & CRM"]
+        RESEND["Resend Email API: QR Ticket & Itinerary"]
+        SLACK["Slack / Discord Marketing Webhook"]
+    end
+
+    U1 -->|"1. Publishes Madrid 2026 Content"| X
+    U2 -->|"1. Publishes Technical Workshop"| GH
+    U1 -->|"2. Submits Content URI & Wallet"| CLI
+    CLI -->|"3. Enqueue Verification"| WORKER
+    WORKER -->|"4. Inspects Metrics & Authenticity"| X
+    WORKER -->|"5. Signs Authorization Payload"| ED25519
+    WORKER -->|"6. Invokes claim_reward Instruction"| PROG
+    PROG -->|"7. Validates Signature & Metrics"| CAMPAIGN
+    PROG -->|"8. Disburses Bounty & Mints Badge"| ESCROW
+    ESCROW -->|"9. Releases Rewards to Creator"| U1
+    PROG -.->|"10. Emits ContentClaimedEvent"| WORKER
+    WORKER -->|"11. Dispatches VIP Pass & Welcome Kit"| RESEND
+    WORKER -->|"12. Broadcasts Win to War Room"| SLACK
