@@ -7,7 +7,7 @@ PROGRAM_ID=Encu26Mad11111111111111111111111111111111111
 ORACLE_PRIVATE_KEY="[1,2,3...]" # 64-byte JSON byte array
 
 # Enterprise Integrations
-RESEND_API_KEY=re_live_xxxxxxxxxxxxxxxxxxxxxxxx
+RESEND_API_KEY=re_test_000000000000000000000000
 DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 SLACK_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 PORT=8080

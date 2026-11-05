@@ -891,7 +891,7 @@ services:
 Create a `.env` file in the project root:
 ```env
 SOLANA_RPC_URL=https://api.devnet.solana.com
-RESEND_API_KEY=re_123456789_enterpriseKey
+RESEND_API_KEY=re_test_000000000000000000000000
 DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 EMAIL_FROM=entradas@solana-madrid.es
 PORT=8080

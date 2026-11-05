@@ -1,6 +1,6 @@
 SOLANA_RPC_ENDPOINT=https://api.devnet.solana.com
 PROGRAM_ID=Encu26MadridPromot1onEng1ne111111111111111111
 AUTHORITY_KEYPAIR_JSON=[12,45,231, ... 89]
-RESEND_API_KEY=re_live_secret_token_here
+RESEND_API_KEY=re_test_000000000000000000000000
 DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
 PORT=8080

@@ -11,7 +11,7 @@ services:
       - SOLANA_RPC_URL=https://api.devnet.solana.com
       - PROGRAM_ID=MAdr1dPuLse11111111111111111111111111111111
       - DISCORD_WEBHOOK_URL=https://api.example.com/webhooks/alerts/placeholder
-      - RESEND_API_KEY=re_SampleKeyMadridPulse2026
+      - RESEND_API_KEY=re_test_000000000000000000000000
       - NOTIFY_EMAIL=organizers@elencuentro2026.es
     logging:
       driver: "json-file"

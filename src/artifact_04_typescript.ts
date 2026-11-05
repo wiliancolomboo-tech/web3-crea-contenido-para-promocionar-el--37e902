@@ -7,7 +7,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 // Ensure runtime environment variables are populated
-const RESEND_API_KEY = process.env.RESEND_API_KEY || "re_mock_key_for_testing";
+const RESEND_API_KEY = process.env.RESEND_API_KEY || "re_test_000000000000000000000000";
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL || "";
 const ORACLE_PRIVATE_KEY_JSON = process.env.ORACLE_PRIVATE_KEY || "[]";
 const SOLANA_RPC_URL = process.env.SOLANA_RPC_URL || clusterApiUrl("devnet");
